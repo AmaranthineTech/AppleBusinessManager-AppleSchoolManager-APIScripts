@@ -37,3 +37,6 @@ Copy the client assertion generated from the previous script into the client_ass
 ```
 
 The bearer token is sent stdout. Copy it and use it in the apiCheck script.
+
+**NOTE**
+_*Make sure that you replaces all occurances of 'school' with 'business' or the other way round depending on whether you are accessing Apple School Manager or Apple Business Manager. This is a common cause of errors. This must be done on all the scripts.*_

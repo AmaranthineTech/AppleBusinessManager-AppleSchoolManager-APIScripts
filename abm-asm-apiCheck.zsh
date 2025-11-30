@@ -3,7 +3,7 @@
 # ****************************************************************************************************
 # NAME: 	apiCheck.zsh
 # AUTHOR:	Arun Patwardhan
-# DATE: 	7th October 2025
+# DATE: 	30th November 2025
 # CONTACT:	arun@amaranthine.co.in
 # ****************************************************************************************************
 
@@ -54,15 +54,31 @@ ACCESS_TOKEN="----------"
 
 #1. Get all devices
 # --------------------
-/usr/bin/curl -X GET "https://api-school.apple.com/v1/orgDevices" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/orgDevices" -H "Authorization: Bearer ${ACCESS_TOKEN}"
 
 #2. Get specific device
 # --------------------
-/usr/bin/curl -X GET "https://api-school.apple.com/v1/orgDevices/----------" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/orgDevices/----------" -H "Authorization: Bearer ${ACCESS_TOKEN}"
 
 #3. Get MDM servers
 # --------------------
-/usr/bin/curl -X GET "https://api-school.apple.com/v1/mdmServers" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/mdmServers" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+
+#4. Get AppleCare coverage
+# --------------------
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/orgDevices/----------/appleCareCoverage" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+
+#5. Get devices assigned to an MDM server
+# --------------------
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/mdmServers/----------/relationships/devices" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+
+#6. Get MDM server for a specific device
+# --------------------
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/orgDevices/----------/relationships/assignedServer" -H "Authorization: Bearer ${ACCESS_TOKEN}"
+
+#7. Get device activity
+# --------------------
+/usr/bin/curl -X GET "https://api-business.apple.com/v1/orgDeviceActivities/----------" -H "Authorization: Bearer ${ACCESS_TOKEN}"
 
 # ****************************************************************************************************
 # ********** SCRIPT ENDS HERE **********

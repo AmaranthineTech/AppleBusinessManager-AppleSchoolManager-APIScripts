@@ -56,8 +56,8 @@ from authlib.jose import jwt
 from Crypto.PublicKey import ECC
 
 private_key_file = "/path/to/apidemo.pem"
-client_id = "SCHOOLAPI.----------"
-team_id = "SCHOOLAPI.----------"
+client_id = "BUSINESSAPI.----------"
+team_id = "BUSINESSAPI.----------"
 key_id = "----------"
 audience = "https://account.apple.com/auth/oauth2/v2/token"
 alg = "ES256"

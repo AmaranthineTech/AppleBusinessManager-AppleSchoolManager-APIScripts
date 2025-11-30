@@ -42,7 +42,7 @@ client_assertion="----------"
 /usr/bin/curl -s -X POST \
 -H 'Host: account.apple.com' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
-"https://account.apple.com/auth/oauth2/token?grant_type=client_credentials&client_id=${client_id}&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion=${client_assertion}&scope=school.api" > /Users/Shared/response.json
+"https://account.apple.com/auth/oauth2/token?grant_type=client_credentials&client_id=${client_id}&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion=${client_assertion}&scope=business.api" > /Users/Shared/response.json
 
 # Extract the access token from the entire response
 /usr/bin/plutil -extract access_token raw /Users/Shared/response.json

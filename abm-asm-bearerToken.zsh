@@ -36,7 +36,7 @@
 # ****************************************************************************************************
 
 # Variables
-client_id="SCHOOLAPI.----------"
+client_id="BUSINESSAPI.----------"
 client_assertion="----------"
 
 /usr/bin/curl -s -X POST \
